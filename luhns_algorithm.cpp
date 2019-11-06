@@ -2,7 +2,7 @@
 	FILE			:	luhns_algorithm.cpp
 	PROJECT			:	None
 	PROGRAMMER		:	Braiden Gole
-	FIRST VERSION	:	2019-10-29
+	FIRST VERSION		:	2019-10-29
 	DESCRIPTION		:	This is luhns algorithm,
 						practicing (C). This is a credit
 						card verification algorithm this
