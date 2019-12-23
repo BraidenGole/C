@@ -12,8 +12,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#define KMAX_SIZEOF_ARRAY 8
-
 int main(int argc, char* argv[])
 {
     // Check to see if the user supplied a <CREDIT CARD NUMBER>.
