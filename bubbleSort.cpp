@@ -15,7 +15,7 @@ int main(void)
     // Initialize an array to sort.
     int arrayToSort[KMAXSORTLENGTH] = { 4, 6, 8, 2, 4, 1, 7, 4, 14, 56 };
     short bubble = 0; short reverseSwap = 0; short valueToSwap = 0;
-    while (bubble < KMAXSORTLENGTH - 1)
+    while (bubble < KMAXSORTLENGTH)
     {   
         reverseSwap = KMAXSORTLENGTH - 1;
         while (reverseSwap > bubble)
