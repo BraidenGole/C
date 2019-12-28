@@ -2,7 +2,7 @@
     FILE            :   creditCard.cpp
     PROJECT         :   None
     PROGRAMMER      :   Braiden Gole
-    FIRST VERSION   :   2019-12-17
+    FIRST VERSION   :   2019-12-28
     DESCRIPTION     :   This is the application of luhns algorithm. This does not entirely
                         validate a credit card because you would need more information in
                         order to complete full validation. This program justs outlines
