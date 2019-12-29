@@ -1,6 +1,6 @@
 # Practice_C
 
-This repository is just for the sake of practicing (C) I will compile g++ and have the extension .cpp of all files but use (C)
+This repository is just for the sake of practicing (C) I will compile g++ and have the extension .cpp for all files but use (C)
 syntax.
 
 Content from this repository does not 100% represent what I would submit to an organization.
