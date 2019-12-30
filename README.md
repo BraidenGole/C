@@ -17,5 +17,8 @@ Some changes to almost all files:
     
   - One line IF statements for example: if (myVar == 2) { return 0; }
   
+  - There are macro names without underscores separting the words of the constant.
+  #define KTHISISANEXAMPLE 10.
+  
   and some other smaller details.
   
