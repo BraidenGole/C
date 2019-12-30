@@ -1,0 +1,29 @@
+
+>>> File Contents Below	[ MODIFIED ]: 
+========================================================================================================
+
+Hello, this challenge allows you to make use of files. # # The challenge brings offers # #
+
+ a list of requirements for the programmer to meet in case a you were asked [:] to perform a
+
+ series of tasks to a file [*] then you will be able to meet these small requirements. Let[']s
+
+ put this to the ? test !!! Don[']t spend the %%%REMAINDER%%% of your time writting comments
+
+.
+
+========================================================================================================
+File Summary :
+	
+	Number of (Commas): [1]
+	Number of (Periods): [3]
+	Number of (Question Marks): [1]
+	Number of (Exclamation Marks): [3]
+	Number of (Hashes): [4]
+	Number of (Remainders): [6]
+
+Garbage characters: [4]
+							[ Amount of symbols ] = [22]
+========================================================================================================
+
+Edited by = [ BRAIDEN GOLE ]
