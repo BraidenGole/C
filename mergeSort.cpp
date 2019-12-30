@@ -9,6 +9,7 @@
                         100.
 */
 #include <stdio.h>
+#include <time.h>
 #include <stdlib.h>
 
 #define KRANDOMVALUESLIMIT 101
@@ -16,6 +17,9 @@
 
 int main(void)
 {   
+    // Start the random number generator !
+    srand(time(NULL));
+    
     // Declare an array of randomValues[].
     int randomValues[KRANDOMVALUESLIMIT] = { 0 }; short randomize = 0;
     const short KrandomUpToOneHundred = 100; short newLineReset = 0;
