@@ -191,6 +191,16 @@ int main(int argc, char* argv[])
             fprintf(pFileToWriteTo, "%s[%i]", "\n\tNumber of (Hashes): ", numberOfHashes);
             fprintf(pFileToWriteTo, "%s[%i]", "\n\tNumber of (Remainders): ", numberOfPercentSymbols);
             fprintf(pFileToWriteTo, "%s[%i]", "\n\nGarbage characters: ", numberOfGarbageChars);
+            
+            // Print the garbage characters.
+            fprintf(pFileToWriteTo, "%s", "\n\nCharacters that are garbage: ");
+            short garbage = 1; 
+            while (garbage <= numberOfGarbageChars) 
+            { 
+                fprintf(pFileToWriteTo, "{%c}", garbageCharacters[garbage]); 
+                ++garbage; 
+            }
+
             fprintf(pFileToWriteTo, "%s[%i]", "\n\t\t\t\t\t\t\t[ Amount of symbols ] = ", numberOfTotalSymbols);
             fprintf(pFileToWriteTo, "%s%s", "\n==================================",
             "======================================================================");
