@@ -15,7 +15,7 @@
         Step #2: Double-space every line of the file.
         Step #3: Count the number of upperCase & lowerCase characters.
         Step #4: Switch any upperCase letter to a lowerCase vice versa.
-        Step #5: Count the occurrences of each symbol listed here: 
+        Step #5: Count the number of occurrences of each symbol listed here: 
         | ',' | '.' | '?' | '!' | '#' | '%' |.
 
         Step #6: If a symbol is [ NOT ] in the list of symbols, then store this
