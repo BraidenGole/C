@@ -69,7 +69,7 @@ int main(void)
     return 0;
 }
 
-/**     -- Function header comments
+/**     -- Function header comment
  *  FUNCTION        :   bBinarySearch
  *  DESCRIPTION     :   This function takes in the sorted set of numbers
  *                      as input and will search for the number to find.
