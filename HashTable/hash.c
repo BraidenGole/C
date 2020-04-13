@@ -29,7 +29,7 @@ int main(void)
     int iReturnValue = 0;
     char arsBuffer[K50BYTES] = {""};
 
-    // Keep looping until the return value of the insert function is equat to 1.
+    // Keep looping until the return value of the insert function is equal to 1.
     printf("\n\tKeep entering names unitl loop stops !\n%s", 
     "\t--------------------------------------\n\n");
     do
@@ -61,7 +61,7 @@ int main(void)
     }
     else { printf("\n\t[ The name exists ! ]\n"); }
 
-    // Prompt the user fop a name to delete.
+    // Prompt the user for a name to delete.
     char arsNameToDelete[K50BYTES] = {""};
     printf(KPROMPT_FOR_NAMETODELETE);
     fgets(arsNameToDelete, K50BYTES, stdin);
