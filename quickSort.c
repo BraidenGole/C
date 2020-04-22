@@ -40,8 +40,13 @@ int main(void)
 /**     -- Function header comment
  *  FUNCTION        :   iPivotPlacement
  *  DESCRIPTION     :   This function will take in the set of items to
- *                      partition off of and the partition element which
- *                      happens to be the center element.
+ *                      partition off of. The partition element is
+ *                      the center element of the set. We use this
+ *                      pivot element to compare numbers that are
+ *                      (less than) the pivot get moved to the left
+ *                      side of the pivot while every number (larger than)
+ *                      the pivot get moved to the very right of the pivot
+ *                      element.
  *  PARAMETERS      :   ariNumbers[KNUMBERLIMIT], piCenter
  *  RETURNS         :   iLeftSide
  */
@@ -72,7 +77,8 @@ int iPivotPlacement(int ariNumbers[KNUMBERLIMIT], int* piCenter)
  *  FUNCTION        :   quickSort
  *  DESCRIPTION     :   This function will take the elements to sort as
  *                      well as the index at which the pivot element sits
- *                      in the array.
+ *                      in the array. This function will sort each side one
+ *                      at a time separately.
  *  PARAMETERS      :   ariSort[KNUMBERLIMIT], piPivotIndex
  *  RETURNS         :   None
  */
