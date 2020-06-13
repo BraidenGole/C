@@ -7,7 +7,7 @@
  *                      with throughout the linked-list.
  */
 #ifndef _KLINKED_LIST
-#define _KLINKED_LIST
+#define _KLINKED_LIST "linkedList.h"
 
 // Global string constants.
 #define KINTRODUCTION "\n  (Users linked-list): Ouput to console = 'x'\n \
