@@ -66,7 +66,6 @@ struct User* pCreateUser(struct User* pHeadOfUsers, int* piStatusTermination)
                 pReferenceHeadOfUsers = pReferenceHeadOfUsers->pNext;
             }
             pReferenceHeadOfUsers->pNext = pNewUserBlock;
-            // End linking.
         }
     }
     return pHeadOfUsers;
@@ -87,12 +86,9 @@ int enterUserData(struct User* pHeadToWriteTo)
     pHeadToWriteTo->psLastName = (char*)malloc(KINPUT_LIMIT);
     pHeadToWriteTo->psEmail = (char*)malloc(KINPUT_LIMIT);
 
-    // Check the systems resources to see if we have memory
-    // for our variables.
     if (pHeadToWriteTo->psName == NULL) { return 2; }
     if (pHeadToWriteTo->psLastName == NULL) { return 2; }
     if (pHeadToWriteTo->psEmail == NULL) { return 2; }
-    // End systems check for local storage.
 
     printf(KPROMPT_FOR_NAME);
     fgets(pHeadToWriteTo->psName, KINPUT_LIMIT, stdin);
