@@ -65,7 +65,7 @@ int main(void)
                 showWeaponWheel(pHead);
                 break;
             case 5:
-                /** -- Free all Dynamicall allocated memory -- **/
+                /** -- Free all Dynamically allocated memory -- **/
                 wipeWeaponWheel(pHead);
                 bWeaponWheel = false;
         }
