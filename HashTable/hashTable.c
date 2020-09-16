@@ -100,7 +100,7 @@ char* psNameToinsert, int iElementPosition)
 }
 
 /**     -- Function header comment
- *  FUNCTION        :   iHasTableLookup
+ *  FUNCTION        :   iHashTableLookup
  *  DESCRIPTION     :   This function will take in the hash table
  *                      full of names to then be compared against the
  *                      name to lookup.
