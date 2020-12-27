@@ -18,7 +18,7 @@
 /**     -- Method header comments
  *  Method          :   calcualteDistance
  *  Description     :   This will calculate the distance between 
- *  Parameters      :   (x1, y1), (x2, y2)
+ *  Parameters      :   points
  *  Returns         :   distance
  */
 const double calculateDistance(struct Points *points)
@@ -38,8 +38,8 @@ const double calculateDistance(struct Points *points)
 /**     -- Method header comments
  *  Method          :   calculateMidpoint
  *  Description     :   This will calculate the midpoint of a line.
- *  Parameters      :   (x1, y1), (x2, y2)
- *  Returns         :   midpoint[]
+ *  Parameters      :   points
+ *  Returns         :   temp
  */
 struct Points* calculateMidpoint(struct Points *points)
 {   
@@ -72,7 +72,7 @@ const double calculateSlope(struct Points *points)
  *  Method          :   collectPoints
  *  Description     :   This function will be called to collect the two sets of
  *                      points required for some of the functions.
- *  Parameters      :   pairOne, pairTwo
+ *  Parameters      :   points
  *  Returns         :   None
  */
 void collectPoints(struct Points **points) 
