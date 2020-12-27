@@ -15,7 +15,7 @@
  *        NOTE: I did not calculate the sizes of each matrix because I only had the goal to cater to 2x2 and 3x3 matrices.
  * @version 0.1
  * @date 2020-12-27
- * @copyright Copyright (c) 2020
+ * @copyright Copyright (c) Braiden Gole 2020
  */
 #include <stdio.h>
 #include <stdlib.h>
