@@ -18,7 +18,7 @@
  * 
  * @version 0.1
  * @date 2021-01-04
- * @copyright Copyright (c) 2021
+ * @copyright Copyright (c) Braiden Gole 2021
  */
 #include <stdio.h>
 #include <stdlib.h>
