@@ -6,8 +6,8 @@
  * [SOURCE/BOOK]: AL KELLY, IRA POHL ["A Book on C"] Fourth edition page 560.
  * --------------------------------------------------------------------------
  *        This sample is about spawning processing in the (C)
- *        programming language this has support for MSDOS because
- *        we are not going to use the functions "fork()" or "execl()"
+ *        programming language this has support for MSDOS.
+ *        We are not going to use the functions "fork()" or "execl()"
  *        because they are part of the UNIX operating system and MSDOS is
  *        not a multithreaded architecture unlike UNIX. A solution to this is
  *        to use "spawnl()" in (C) for Windows MSDOS in combination with
