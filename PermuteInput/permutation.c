@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
  *  FUNCTION        :   generateOrderlyCombinations
  *  DESCRIPTION     :   This function will output all of the orderly combinations
  *                      of the input supplied.
- *  PARAMETERS      :   input, numberOfCombos, lengthOfInput
+ *  PARAMETERS      :   input, tracer, lengthOfInput
  *  RETURNS         :   None
  */
 void generateOrderlyCombinations(char* input, int tracer, const int lengthOfInput)
