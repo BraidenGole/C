@@ -19,7 +19,7 @@
  *       cant keep track of the chkdsk prosses, you can launch it but and control it from the
  *       secondary window in a batch process, yet the output of the other process.
  * 
- *       Well while reading a "Book on C" I came across the spawning funcitons
+ *       Well while reading a "Book on C" I came across the spawning functions
  *       for MSDOS and it actually involved a chkdsk operation.
  * 
  *       The solution to my problem would be to call a (C) program from
