@@ -3,7 +3,7 @@
  * @author Braiden Gole
  * @brief This is a quicksort implementation.
  *        This quick sort implementation has a heavy use of marcro constants
- *        to speed things up.
+ *        to speed things up also just using them in this way for fun.
  * 
  *        I would not recommend using this many macros however, it works !
  * @version 0.1
