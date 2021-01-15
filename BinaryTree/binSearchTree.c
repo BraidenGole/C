@@ -25,7 +25,6 @@
 
 int main(void)
 {   
-    
     struct LeafNode* rootOfTree = NULL;
     
     rootOfTree = createLeaf(rootOfTree, 'A');
