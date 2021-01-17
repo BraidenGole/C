@@ -17,7 +17,6 @@
 #define AMP &
 
 #define SWAP(tmp, x, y) { tmp=x, x=y, y=tmp; }
-#define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 #define KSIZE 12
 #define KZERO 0
