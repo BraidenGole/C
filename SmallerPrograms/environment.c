@@ -2,9 +2,9 @@
  * @file environment.c
  * @author Braiden Gole
  * @brief This is going to be a small snippet on environment variables.
- * 
+ *        --------------------------------------------------------------------------
  *        [SOURCE/BOOK]: AL KELLY, IRA POHL ["A Book on C"] Fourth edition page 521.
- * 
+ *        --------------------------------------------------------------------------
  *        I have a couple local permanent environment variables that I have created
  *        and used in this (C) application.
  * 
