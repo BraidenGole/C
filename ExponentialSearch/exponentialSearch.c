@@ -34,7 +34,7 @@ const bool binarySearch(int* data, int iter, int size, const int searchTerm)
     // Checking to see which loop we send it to based on its index.
     // We can only do this because this is a search algorithm which suggest
     // that we must have a sorted set of elements to begin with.
-    if (searchTerm __LRGR_EQ__ searchTerm AND searchTerm __LSS_EQ__ data[midIndex])
+    if (searchTerm __LSS_EQ__ data[midIndex])
     {
         int nums = ZERO;
         while (nums __LSS_EQ__ midIndex)
