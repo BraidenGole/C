@@ -23,8 +23,14 @@ int main(void)
     do
     {
         printf(KPROMPT_FOR_NUMBER);
-        if ((fscanf(stdin, "%i", &iMultiUpTo)) == 0) { fflush(stdin); }
-        if (iMultiUpTo >= 1 && iMultiUpTo < KFACTORIALLIMIT) { break; }
+        if ((fscanf(stdin, "%i", &iMultiUpTo)) == 0) 
+        { 
+            fflush(stdin);
+        }
+        if (iMultiUpTo >= 1 && iMultiUpTo < KFACTORIALLIMIT) 
+        { 
+            break;
+        }
     } while (bInputCondition != false);
     
     unsigned int iFactorial = 1;
