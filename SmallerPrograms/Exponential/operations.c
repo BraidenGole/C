@@ -26,8 +26,14 @@ const int iChangeBase(int iBase)
     do
     {
         printf(KPROMPT_FOR_BASE);
-        if ((fscanf(stdin, "%i", &iNewBase)) == 0) { fflush(stdin); }
-        else { bBaseCondition = false; }
+        if ((fscanf(stdin, "%i", &iNewBase)) == 0) 
+        { 
+            fflush(stdin);
+        }
+        else 
+        { 
+            bBaseCondition = false;
+        }
     } while (bBaseCondition != false);
     return iNewBase;
 }
@@ -46,8 +52,14 @@ const int iChangeExponent(int iPower)
     do
     {
         printf(KPROMPT_FOR_EXPONENT);
-        if ((fscanf(stdin, "%i", &iNewExponent)) == 0) { fflush(stdin); }
-        else { bExponentCondition = false; }
+        if ((fscanf(stdin, "%i", &iNewExponent)) == 0) 
+        { 
+            fflush(stdin);
+        }
+        else 
+        { 
+            bExponentCondition = false;
+        }
     } while (bExponentCondition != false);
     return iNewExponent;
 }
