@@ -38,11 +38,20 @@ int main(void)
         iLookupNumber = -2;
 
         printf(KPROMPT_FOR_LOOKUPNUMBER);
-        if ((fscanf(stdin, "%i", &iLookupNumber)) == 0) { fflush(stdin); }
+        if ((fscanf(stdin, "%i", &iLookupNumber)) == 0) 
+        { 
+            fflush(stdin);
+        }
 
         // Send the number to lookup into the jump sort function.
-        if ((iJumpSearchingSet(iLookupNumber)) == 1) { printf(KNOTFOUND); }
-        else { printf(KFOUND); }
+        if ((iJumpSearchingSet(iLookupNumber)) == 1) 
+        { 
+            printf(KNOTFOUND);
+        }
+        else 
+        { 
+            printf(KFOUND);
+        }
     } while (iLookupNumber != -1);
     return 0;
 }
