@@ -24,7 +24,10 @@ const bool bIsEmpty(int* piTop);
 const int push(int ariStack[], int iData, int* piTop)
 {
     // When adding an entry we must check for fullness of the stack.
-    if ((bIsFull(piTop)) == true) { return -1; }
+    if ((bIsFull(piTop)) == true) 
+    { 
+        return -1;
+    }
     
     *piTop = *piTop + 1;
     ariStack[*piTop] = iData;
@@ -39,7 +42,10 @@ const int push(int ariStack[], int iData, int* piTop)
  */
 const int pop(int ariStack[], int* piTop)
 {
-    if ((bIsEmpty(piTop)) == true) { return -1; }
+    if ((bIsEmpty(piTop)) == true) 
+    { 
+        return -1;
+    }
     int iDelete = 0;
 
     ariStack[*piTop] = 0;
@@ -54,7 +60,10 @@ const int pop(int ariStack[], int* piTop)
  *  PARAMETERS      :   ariStack, piTop
  *  RETURNS         :   ariStack[piTop]
  */
-const int peek(int ariStack[], int* piTop) { return ariStack[*piTop]; }
+const int peek(int ariStack[], int* piTop) 
+{ 
+    return ariStack[*piTop];
+}
 
 /**
  *  FUNCTION        :   showStack
@@ -65,7 +74,10 @@ const int peek(int ariStack[], int* piTop) { return ariStack[*piTop]; }
 const int showStack(int ariStack[], int* piTop)
 {   
     // Is the list empty ?
-    if ((bIsEmpty(piTop)) == true) { return -1; }
+    if ((bIsEmpty(piTop)) == true) 
+    { 
+        return -1;
+    }
 
     printf(KSTACKHEADER);
     int iNumbers = 0;
@@ -89,7 +101,10 @@ const int showStack(int ariStack[], int* piTop)
  */
 const bool bIsEmpty(int* piTop)
 {
-    if (*piTop == -1) { return true; }
+    if (*piTop == -1) 
+    { 
+        return true;
+    }
     return false;
 }
 
@@ -101,6 +116,9 @@ const bool bIsEmpty(int* piTop)
  */
 const bool bIsFull(int* piTop)
 {
-    if (*piTop == KSTACKSIZE - 1) { return true; }
+    if (*piTop == KSTACKSIZE - 1) 
+    { 
+        return true;
+    }
     return false;
 }
