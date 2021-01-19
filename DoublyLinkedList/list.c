@@ -44,7 +44,10 @@ int main(void) {
         {
             case 1:
                 // If we ran out of memory end the program.
-                if ((create(&pHead, &pTail)) == false) { return -1; }
+                if ((create(&pHead, &pTail)) == false) 
+                { 
+                    return -1;
+                }
                 break;
             case 2:
                 // Output a list of all of the tags so the user can choose a tag to delete.
