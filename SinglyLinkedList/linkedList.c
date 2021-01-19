@@ -29,10 +29,16 @@ const bool submitAGrade(struct Grade** ppHead, char* psStudent, int iPercent, in
 {
     struct Grade* pNewGrade = NULL;
     pNewGrade = (struct Grade*)malloc(sizeof(struct Grade));
-    if (pNewGrade == NULL) { *iStatus = -1; }
+    if (pNewGrade == NULL) 
+    { 
+        *iStatus = -1;
+    }
 
     // Fill in the grade field with the percented represented as an integer.
-    if ((gradeRangeCheck(iPercent)) == false) { *iStatus = -2; }
+    if ((gradeRangeCheck(iPercent)) == false) 
+    { 
+        *iStatus = -2;
+    }
 
     // Enter the information.
     strcpy(pNewGrade->arsStudent, psStudent);
@@ -98,8 +104,14 @@ const bool studentNameValidator(char* psStudentsName, const int KiLength)
     int iLetters = 0;
     while (iLetters <= KiLength)
     {   
-        if ((isdigit(psStudentsName[iLetters])) > 0) { return false; }
-        else if ((ispunct(psStudentsName[iLetters])) != 0) { return false; }
+        if ((isdigit(psStudentsName[iLetters])) > 0) 
+        { 
+            return false;
+        }
+        else if ((ispunct(psStudentsName[iLetters])) != 0) 
+        { 
+            return false;
+        }
         ++iLetters;
     }
     return true;
@@ -114,7 +126,10 @@ const bool studentNameValidator(char* psStudentsName, const int KiLength)
  */
 const bool gradeRangeCheck(int iGrade)
 {
-    if (iGrade >= KMIN && iGrade <= KMAX) { return true; }
+    if (iGrade >= KMIN && iGrade <= KMAX) 
+    { 
+        return true;
+    }
     return false;
 }
 
@@ -127,7 +142,10 @@ const bool gradeRangeCheck(int iGrade)
  */
 const bool printGrades(struct Grade* ppHead)
 {   
-    if (ppHead == NULL) { return false; }
+    if (ppHead == NULL) 
+    { 
+        return false;
+    }
     struct Grade* pHeadRef = NULL;
 
     pHeadRef = ppHead;
@@ -151,7 +169,10 @@ const bool printGrades(struct Grade* ppHead)
 void removeNewLine(char* psInput)
 {
     char* psSearchForNewLine = strchr(psInput, '\n');
-    if (psSearchForNewLine != NULL) { *psSearchForNewLine = '\0';}
+    if (psSearchForNewLine != NULL) 
+    { 
+        *psSearchForNewLine = '\0';
+    }
 }
 
 /**     -- Function header comment
