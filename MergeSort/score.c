@@ -35,8 +35,14 @@ int main(void)
     piOther = (int*)malloc(sizeof(int) * KSCORELIMIT);
 
     // Sanity check for system resources.
-    if (piHalf == NULL) { return 1; }
-    if (piOther == NULL) { return 1; }
+    if (piHalf == NULL) 
+    { 
+        return 1;
+    }
+    if (piOther == NULL) 
+    { 
+        return 1;
+    }
     // End check, we have memory !
 
     // Partition the set of numbers into the 1D arrays.
@@ -49,7 +55,10 @@ int main(void)
     // Merge the two sorted halves into the final set of scores.
     int* piFinalScores = NULL;
     piFinalScores = (int*)malloc(sizeof(int) * KSCORELIMIT);
-    if (piFinalScores == NULL) { return 1; }
+    if (piFinalScores == NULL) 
+    { 
+        return 1;
+    }
     else
     {   
         // We have memory for the final set of scores.
