@@ -27,7 +27,10 @@ const bool create(struct GamerTag** ppHead, struct GamerTag** ppTail)
 {   
     struct GamerTag* pNewTag = NULL;
     pNewTag = (struct GamerTag*)malloc(sizeof(struct GamerTag));
-    if (pNewTag == NULL) { return false; }
+    if (pNewTag == NULL) 
+    { 
+        return false;
+    }
 
     // Collect the new tag name.
     getchar();
@@ -72,8 +75,14 @@ const bool create(struct GamerTag** ppHead, struct GamerTag** ppTail)
     pNewTag->pNext = pNextTag;
     pLastTag->pNext = pNewTag;
 
-    if (pNextTag == NULL) { *ppTail = pNewTag; }
-    else { pNextTag->pPrev = pNewTag; }
+    if (pNextTag == NULL) 
+    { 
+        *ppTail = pNewTag;
+    }
+    else 
+    { 
+        pNextTag->pPrev = pNewTag;
+    }
     return true;
 }
 
@@ -184,7 +193,10 @@ void showTagsInReverseOrder(struct GamerTag* pTail)
 void removeNewLine(char* psStrWithNewLine)
 {
     char* psFindTheNewLine = strchr(psStrWithNewLine, '\n');
-    if (psFindTheNewLine != NULL) { *psFindTheNewLine = '\0';}
+    if (psFindTheNewLine != NULL) 
+    { 
+        *psFindTheNewLine = '\0';
+    }
 }
 
 /**
