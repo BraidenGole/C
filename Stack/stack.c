@@ -57,7 +57,10 @@ int main(void)
                 }
                 break;
             case 2:
-                if ((pop(ariStack, &iTop)) == -1) { printf(KEMPTY); }
+                if ((pop(ariStack, &iTop)) == -1) 
+                { 
+                    printf(KEMPTY);
+                }
                 break;  
             case 3:
                 printf("\nThe top of the stack: [%i]\n\n", ariStack[iTop]);
@@ -70,6 +73,9 @@ int main(void)
         }
     }
     // Display the list one last time.
-    if ((showStack(ariStack, &iTop)) == -1) { fprintf(stderr, KEMPTY); }
+    if ((showStack(ariStack, &iTop)) == -1) 
+    { 
+        fprintf(stderr, KEMPTY);
+    }
     return 0;
 }
