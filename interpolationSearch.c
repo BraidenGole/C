@@ -57,8 +57,7 @@ int main(void)
  *  PARAMETERS      :   ariNumbers[KNUMBERSLIMIT], iLookupNumber, iLow, iHigh
  *  RETURNS         :   0, 1
  */
-const int interpolationSearch(int ariNumbers[KNUMBERSLIMIT], int* piLookupNumber,
-int iLow, int iHigh)
+const int interpolationSearch(int ariNumbers[KNUMBERSLIMIT], int* piLookupNumber, int iLow, int iHigh)
 {   
     int iPosition = 0;
     while (iLow <= iHigh)
