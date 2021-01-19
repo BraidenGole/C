@@ -25,7 +25,6 @@ int main(void)
     int iReturnValue = 0;
     char arsBuffer[K50BYTES] = {""};
 
-    // Keep looping until the return value of the insert function is equal to 1.
     printf("\n\tKeep entering names unitl loop stops !\n%s", 
     "\t--------------------------------------\n\n");
     do
@@ -34,7 +33,6 @@ int main(void)
         fgets(arsBuffer, K50BYTES, stdin);
         clearNewLineDelimiter(arsBuffer);
 
-        // Throw each key into the hash function.
         iHashValue = iTheHashFunction(arsBuffer);
         iReturnValue = iInsertPeoplesNames(arspHashTable, arsBuffer, iHashValue);
 
@@ -47,7 +45,6 @@ int main(void)
 
     showTheTableOfNames(arspHashTable);
 
-    // Prompt the user for a name to lookup.
     char arsLookupName[K50BYTES] = {""};
     printf(KPROMPT_FOR_LOOKUPNAME);
     fgets(arsLookupName, K50BYTES, stdin);
