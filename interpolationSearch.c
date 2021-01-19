@@ -29,7 +29,10 @@ int main(void)
     {   
         printf(KPROMPT_FOR_LOOKUPNUMBER);
         iReturnValue = fscanf(stdin, "%i", &iNumberToLookup);
-        if (iReturnValue == 0) { fflush(stdin); }
+        if (iReturnValue == 0) 
+        { 
+            fflush(stdin);
+        }
     } while (iReturnValue == 0);
 
     // We have a number, passing in data to interpolation function.
@@ -39,7 +42,10 @@ int main(void)
         printf("Not found !");
         return 0;
     }
-    else { printf("Found"); }
+    else 
+    { 
+        printf("Found");
+    }
     return 0;
 }
 
@@ -61,10 +67,19 @@ int iLow, int iHigh)
         iPosition = iLow + ((*piLookupNumber - ariNumbers[iLow]) * (iHigh - iLow) / (ariNumbers[iHigh] - ariNumbers[iLow]));
 
         // Check the calculated position for a matching element.
-        if (ariNumbers[iPosition] == *piLookupNumber) { return 0; }
+        if (ariNumbers[iPosition] == *piLookupNumber) 
+        { 
+            return 0;
+        }
 
-        if (ariNumbers[iPosition] >= *piLookupNumber) { iHigh = iPosition - 1; }
-        else { iLow = iPosition + 1; }
+        if (ariNumbers[iPosition] >= *piLookupNumber) 
+        { 
+            iHigh = iPosition - 1;
+        }
+        else 
+        { 
+            iLow = iPosition + 1;
+        }
     }
     return 1;
 }
