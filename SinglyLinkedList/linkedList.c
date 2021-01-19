@@ -84,7 +84,10 @@ const bool deleteGrade(struct Grade** ppHead, char* psStudent)
     }
     
     // If the there are no student names equal to the one supplied return false.
-    if (pHeadRef == NULL) { return false; }
+    if (pHeadRef == NULL) 
+    { 
+        return false;
+    }
 
     pPrev->pNext = pHeadRef->pNext;
     free(pHeadRef);
