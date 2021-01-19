@@ -21,8 +21,7 @@
  *                      piHalf, piOther
  *  RETURNS         :   None
  */
-void partitionScores(int ariScores[KSCOREROWS][KSCORECOLS],
-int* piHalf, int* piOther)
+void partitionScores(int ariScores[KSCOREROWS][KSCORECOLS], int* piHalf, int* piOther)
 {   
     int iPartRows = 0;
     int iPartCols = 0;
@@ -130,7 +129,10 @@ void showAllScores(int* piFinalSet)
             iLineBreak = 0;
             printf("\n\t"); 
         }
-        else { printf("%i ", piFinalSet[iUnpackNumbers]); }
+        else 
+        { 
+            printf("%i ", piFinalSet[iUnpackNumbers]);
+        }
         ++iLineBreak;
         ++iUnpackNumbers;
     }
