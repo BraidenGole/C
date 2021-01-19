@@ -28,7 +28,10 @@ const bool bAddWeapon(struct Weapon** ppWeaponHead, struct Weapon** ppWeaponTail
     pNewWeapon = (struct Weapon*)malloc(sizeof(struct Weapon));
 
     // Check the system for sufficient memory.
-    if (pNewWeapon == NULL) { return false; }
+    if (pNewWeapon == NULL) 
+    { 
+        return false;
+    }
     else
     {
         // We have memory for a new weapon entry.
@@ -92,7 +95,10 @@ const bool bDeleteWeaponAtHead(struct Weapon** ppWeaponHead, struct Weapon** ppW
     pTempNode = *ppWeaponHead;
 
     // Is the weapon wheel empty ?
-    if (*ppWeaponHead == NULL) { return false; }
+    if (*ppWeaponHead == NULL) 
+    { 
+        return false;
+    }
     else if ((*ppWeaponHead)->pNext == *ppWeaponHead)
     {
         *ppWeaponHead = NULL;
@@ -140,7 +146,10 @@ void wipeWeaponWheel(struct Weapon* pWeaponHead)
 void newLineRemover(char* psInputWithNewLine)
 {
     char* psFindTheNewLine = strchr(psInputWithNewLine, '\n');
-    if (psFindTheNewLine != NULL) { psFindTheNewLine = NULL; }
+    if (psFindTheNewLine != NULL) 
+    { 
+        psFindTheNewLine = NULL;
+    }
 }
 
 /**
