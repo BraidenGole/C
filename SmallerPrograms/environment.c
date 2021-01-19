@@ -37,7 +37,7 @@ int main (int argc, char* argv[], char* env[])
     }
 
     // Display some custom information.
-    displayUserInformation(env);
+    displayUserInformation();
     return 0;
 }
 
