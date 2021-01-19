@@ -70,9 +70,15 @@ int main(void)
                 // If we ran out of memory end the program.
                 bGradeEntry = submitAGrade(&pHead, arsName, iGradeData, &iErrorStatus);
 
-                if (bGradeEntry == true) { fprintf(stdout, KADDEDTOTHELIST); }
+                if (bGradeEntry == true) 
+                { 
+                    fprintf(stdout, KADDEDTOTHELIST);
+                }
 
-                if (iErrorStatus == -1) { return -1; }
+                if (iErrorStatus == -1) 
+                { 
+                    return -1;
+                }
                 else if (iErrorStatus == -2) 
                 { 
                     fprintf(stderr, KOUTOFRANGE);
@@ -93,12 +99,21 @@ int main(void)
                 }
 
                 // If a grade was not found in the list of grades presented let the user know.
-                if ((deleteGrade(&pHead, arsDeleteGrade)) == false) { fprintf(stderr, KNOTFOUND); }
-                else { printf(KFOUND); }
+                if ((deleteGrade(&pHead, arsDeleteGrade)) == false) 
+                { 
+                    fprintf(stderr, KNOTFOUND);
+                }
+                else 
+                { 
+                    printf(KFOUND);
+                }
                 break;
             case 3:
                 // If there are no current entries the list output a empty message.
-                if ((printGrades(pHead)) == false) { fprintf(stderr, KEMPTYLIST); }
+                if ((printGrades(pHead)) == false) 
+                { 
+                    fprintf(stderr, KEMPTYLIST);
+                }
                 break;
             case 4:
                 releaseDynamicMemory(&pHead);
