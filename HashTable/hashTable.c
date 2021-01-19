@@ -70,7 +70,10 @@ char* psNameToinsert, int iElementPosition)
     // Create the temporary structure to hold the name to insert.
     struct NamesOfPeople* pHoldName = NULL;
     pHoldName = (struct NamesOfPeople*)malloc(K50BYTES);
-    if (pHoldName == NULL) { return 2; }
+    if (pHoldName == NULL) 
+    { 
+        return 2;
+    }
     else
     {   
         // Loop, starting with the calculated index position.
@@ -115,7 +118,10 @@ char* psTheLookupName)
     while (arsHashTable[iIndex] != NULL)
     {   
         // If all cells were visited and the name was not found return 1.
-        if (iVisitedCells == KTABLELIMIT) { return 1; }
+        if (iVisitedCells == KTABLELIMIT) 
+        { 
+            return 1;
+        }
 
         // The position is to be filled and have a string matching the lookup.
         if ((arsHashTable[iIndex] != NULL) && 
@@ -149,7 +155,10 @@ char* psNameToDelete)
     while (arspHashTable[iIndex] != NULL)
     {   
         // If all cells were visited and the name was not found return 1.
-        if (iVisitedCells == KTABLELIMIT) { return 1; }
+        if (iVisitedCells == KTABLELIMIT) 
+        { 
+            return 1;
+        }
 
         if ((arspHashTable[iIndex] != NULL) &&
         ((strcmp(arspHashTable[iIndex]->arsName, psNameToDelete)) == 0))
