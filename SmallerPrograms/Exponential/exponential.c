@@ -32,8 +32,14 @@ int main(void)
         do
         {
             printf(KPROMPT_FOR_SELECTION);
-            if ((fscanf(stdin, "%i", &iSelection)) == 0) { fflush(stdin); }
-            if (iSelection >= 1 && iSelection <= KENDPROGRAM) { bSelectionCondition = false; }
+            if ((fscanf(stdin, "%i", &iSelection)) == 0) 
+            { 
+                fflush(stdin);
+            }
+            if (iSelection >= 1 && iSelection <= KENDPROGRAM) 
+            { 
+                bSelectionCondition = false;
+            }
         } while (bSelectionCondition != false);
 
         switch (iSelection)
