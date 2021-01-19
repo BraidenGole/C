@@ -43,7 +43,8 @@ int main(void)
 
     int callCode = 0;
     callCode = WSAStartup(versioningWord, &wsaData);
-    if (callCode != 0){
+    if (callCode != 0)
+    {
         fprintf(stderr, "Windows scripting application FAILED: %i", callCode);
         return 1;
     }
