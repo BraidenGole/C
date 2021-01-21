@@ -58,7 +58,10 @@ int main(void)
                 printf("\n\tWEAPON UPDATED: %s", psWieldNewWeapon(pHead, arsWeaponToWield));
                 break;
             case 3:
-                if ((bDeleteWeaponAtHead(&pHead, &pTail)) == false) { fprintf(stderr, KEMPTY); }
+                if ((bDeleteWeaponAtHead(&pHead, &pTail)) == false) 
+                { 
+                    fprintf(stderr, KEMPTY);
+                }
                 printf(KDELETED);
                 break;
             case 4:
