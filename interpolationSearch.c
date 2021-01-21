@@ -14,8 +14,7 @@
 #define KNUMBERSLIMIT 10
 
 // Function prototypes.
-const int interpolationSearch(int ariNumbers[KNUMBERSLIMIT], int* piLookupNumber,
-int iLow, int iHigh);
+const int interpolationSearch(int ariNumbers[KNUMBERSLIMIT], int* piLookupNumber, int iLow, int iHigh);
 
 int main(void)
 {   
