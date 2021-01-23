@@ -76,7 +76,7 @@ int main(void)
     // int* p = NULL;
     // p = &valueToFill;
 
-    // If we were to sub in a pointer variable rather than a <-- int* valueToFill = NULL;
+    // If we were to sub in a pointer variable rather than a <-- (pointer variable) int* valueToFill = NULL;
     // regular int variable we would simply sub in the variable name.
     // like so: fillVariable(valueToFill);
 
