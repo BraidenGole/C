@@ -55,13 +55,15 @@ struct Node* nEnterDataIntoHead(struct Node* head, const char* data)
         // char name[]
         // instead of 
         // char* name
-        // the typically we would have to write every character to the array or we could use
-        // a build in function to do that. Now if we go the other route we have to dynamically
-        // allocate the star pointer then we can assing values to it NOTE: be sure to FREE ALL
-        // DYNAMIC MEMORY "A call to malloc requires a call to free() !"
+        // then typically we would have to write every character to the array or we could use
+        // a built in function to do that. Now if we go the other route we have to dynamically
+        // allocate the star pointer then we can assign values to it
+        
+        // NOTE: be sure to FREE ALL DYNAMIC MEMORY "A call to malloc requires a call to free() !"
 
         // Just to be sure when we are talking about dynamically allocating we mean the structure
         // field NOT the newNode because the structure field char* name would have to be dynamically allocated.
+        // example below:
 
         // char* name = NULL;
         // name = (char*)malloc(sizeof(char) * KMAXSIZE);
