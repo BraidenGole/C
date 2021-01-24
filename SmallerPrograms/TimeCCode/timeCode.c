@@ -4,7 +4,7 @@
  * @brief This is an example of timing a process in the (C) programming language.
  * 
  * [IMPORTANT:] The example below shows how to properly time your code but I want
- *              to say that I learned you need an array size of one-hundred thousand
+ *              to say that I learned you need an estimate array size of one-hundred thousand
  *              at least in order accumulate any time on the clock.
  * 
  * [IMPORTANT:] However, this will accumulate time because of the display for loop
