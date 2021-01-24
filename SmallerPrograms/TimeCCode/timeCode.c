@@ -62,7 +62,7 @@ int main(void)
 
     // The bubble sort function is so fast that the elapsed time
     // calculated will be 0.0000 but since the for loop is insde as
-    // well it will account for the time it takes to display.
+    // well it will count for the time it takes to display.
     bubbleSort(array, KROWS, KCOLS);
     
     for (undoRows = 0; undoRows < KROWS; undoRows++)
