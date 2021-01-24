@@ -75,8 +75,5 @@ int main(void)
     // Sample 4
     sample_4();
     // End sample 4.
-    
-
-
     return ZERO;
 }
