@@ -22,7 +22,7 @@
 // Function prototypes.
 
 // The time_t in VSCode will be [ RED ] but wont effect the execution.
-void sample_2(time_t timeVar, time_t timeToCompare);
+void sample_2(time_t timeVar);
 void sample_3(void);
 void sample_4(void);
 #endif
