@@ -68,6 +68,10 @@ struct Node* nEnterDataIntoHead(struct Node* head, const char* data)
         // char* name = NULL;
         // name = (char*)malloc(sizeof(char) * KMAXSIZE);
         strcpy(head->name, data);
+        
+        // [NOTE:] Visit my Singly linked list or doubly linked list implementation
+        // for the complete proper algorithm. This is just showing the difference between accessing
+        // the structure with a single pointer vs a double pointer.
     }
     return head;
 }
@@ -98,6 +102,10 @@ const bool bEnterDataIntoHead(struct Node** head, const char* data)
     // then we will see the variable names come up.
     // Example without the function call: (*head)->name[character in name].
     strcpy((*head)->name, data);
+    
+    // [NOTE:] Visit my Singly linked list or doubly linked list implementation
+    // for the complete proper algorithm. This is just showing how to access structure fields
+    // from a double pointer.
     return true;
 }
 
