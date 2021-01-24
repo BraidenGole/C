@@ -1,5 +1,5 @@
 /**
- * @file dateTime.c
+ * @file time.c
  * @author Braiden Gole
  * @brief This is an example of timing a process in the (C) programming language.
  * 
