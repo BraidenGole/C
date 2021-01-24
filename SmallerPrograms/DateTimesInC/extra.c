@@ -75,6 +75,6 @@ void sample_4(void)
     dateTime = localtime(&now);
 
     // Use strftime() format the string.
-    strftime(formattedDate2, KONEHUNDRED, _DATE_FORMAT3, dateTime);
+    strftime(formattedDate2, KONEHUNDRED, _DATE_FORMAT4, dateTime);
     fprintf(stdout, "\nDate: %s", formattedDate2);
 }
