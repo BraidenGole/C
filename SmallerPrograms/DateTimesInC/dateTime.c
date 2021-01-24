@@ -65,8 +65,7 @@ int main(void)
 
     // Sample #2.
     time_t createTime = 0;
-    time_t comparer = now;
-    sample_2(createTime, comparer);
+    sample_2(createTime);
     // End sample 2.
 
     // Sample #3
