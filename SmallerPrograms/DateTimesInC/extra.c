@@ -19,7 +19,7 @@
  *  PARAMETERS      :   timeVar
  *  RETURNS         :   None
  */
-void sample_2(time_t timeVar, time_t timeToCompare)
+void sample_2(time_t timeVar)
 {   
     struct tm *dateTime;
     char formattedTime[KONEHUNDRED] = {""};
