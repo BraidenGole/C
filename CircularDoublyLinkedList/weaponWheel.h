@@ -18,7 +18,7 @@
 #define KSELECTION4 "\n\t4. Show Weapon Wheel."
 #define KSELECTION5 "\n\t5. Quit.\n\n"
 #define KPROMPTFORWEAPON "\tEnter in a weapon: "
-#define KPROMPTFORWIELDNEWWEAPON "\tWield which weapon: "
+#define KPROMPTFORWIELDNEWWEAPON "\n\tWield which weapon: "
 #define KPROMPTFORSELECTION "\tSelect an operation: "
 #define KNOCHARACTERSALLOWED "\n\tNo characters allowed !\n"
 #define KOUTOFMEMORY "\n\tOut of Memory !\n"
@@ -38,10 +38,9 @@ struct Weapon
 };
 
 // Function prototypes.
-const bool bAddWeapon(struct Weapon** pWeaponHead, struct Weapon** pPrev);
-const char* psWieldNewWeapon(struct Weapon* pWeaponHead, char* psWeaponToWield);
-const bool bDeleteWeaponAtHead(struct Weapon** pWeaponHead, struct Weapon** pWeaponTail);
-void showWeaponWheel(struct Weapon* pWeaponHead);
-void wipeWeaponWheel(struct Weapon* pWeaponHead);
+const bool addWeapon(struct Weapon** weaponHead, struct Weapon** weaponTail);
+const char* wieldNewWeapon(struct Weapon* weaponHead, char* weaponToWield);
+const bool deleteWeaponAtHead(struct Weapon** weaponHead, struct Weapon** weaponTail);
+void showWeaponWheel(struct Weapon* weaponHead, struct Weapon* weaponTail);
+void wipeWeaponWheel(struct Weapon* weaponHead);
 #endif
-
