@@ -92,7 +92,10 @@ const bool deleteWeaponAtHead(struct Weapon** weaponHead, struct Weapon** weapon
     pTempNode = *weaponHead;
 
     // Is the weapon wheel empty ?
-    if (*weaponHead == NULL) { return false; }
+    if (*weaponHead == NULL) 
+    { 
+        return false;
+    }
     else if ((*weaponHead)->pNext == *weaponHead)
     {
         *weaponHead = NULL;
