@@ -6,7 +6,7 @@
  *        NOTE: Trying to change my programming style to give variance from
  *              program to program.
  * 
- *        NOTE: The program will recursively continue until one value is found, as
+ *        NOTE: The program will keep going until one value is found, as
  *              soon as a value has been found then the program ends.
  * @version 0.1
  * @date 2021-01-17
