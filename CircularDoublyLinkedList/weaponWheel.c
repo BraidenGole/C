@@ -17,18 +17,18 @@
 void newLineRemover(char* psInputWithNewLine);
 
 /**
- *  FUNCTION        :   bAddWeapon
+ *  FUNCTION        :   addWeapon
  *  DESCRIPTION     :   This function will add a new weapon to the weapon wheel.
- *  PARAMETERS      :   ppWeaponHead, ppWeaponTail
- *  RETURNS         :   ppWeaponHead
+ *  PARAMETERS      :   weaponHead, weaponTail
+ *  RETURNS         :   weaponHead
  */
-const bool bAddWeapon(struct Weapon** ppWeaponHead, struct Weapon** ppWeaponTail)
+const bool addWeapon(struct Weapon** weaponHead, struct Weapon** weaponTail)
 {
-    struct Weapon* pNewWeapon = NULL;
-    pNewWeapon = (struct Weapon*)malloc(sizeof(struct Weapon));
+    struct Weapon* newWeapon = NULL;
+    newWeapon = (struct Weapon*)malloc(sizeof(struct Weapon));
 
     // Check the system for sufficient memory.
-    if (pNewWeapon == NULL) 
+    if (newWeapon == NULL) 
     { 
         return false;
     }
@@ -37,79 +37,73 @@ const bool bAddWeapon(struct Weapon** ppWeaponHead, struct Weapon** ppWeaponTail
         // We have memory for a new weapon entry.
         getchar();
         printf(KPROMPTFORWEAPON);
-        fgets(pNewWeapon->arsWeapon, K100BYTES, stdin);
-        newLineRemover(pNewWeapon->arsWeapon);
+        fgets(newWeapon->arsWeapon, K100BYTES, stdin);
+        newLineRemover(newWeapon->arsWeapon);
         
-        // Is the weapon wheel empty ?
-        if (*ppWeaponHead == NULL) 
+        if (*weaponHead == NULL) 
         {   
-            // Fill the data in of the head and tail node.
-            *ppWeaponHead = pNewWeapon;
-            *ppWeaponTail = pNewWeapon;
+            *weaponHead = newWeapon;
+            *weaponTail = newWeapon;
 
-            // Insert the nodes to the proper position.
-            pNewWeapon->pPrev = *ppWeaponTail;
-            pNewWeapon->pNext = *ppWeaponHead;
+            newWeapon->pPrev = *weaponTail;
+            newWeapon->pNext = *weaponHead;
         }
-        pNewWeapon->pNext = *ppWeaponHead;
-        (*ppWeaponHead)->pPrev = pNewWeapon;
-        pNewWeapon->pPrev = *ppWeaponTail;
-        (*ppWeaponTail)->pNext = pNewWeapon;
-        *ppWeaponHead = pNewWeapon;
+        newWeapon->pNext = *weaponHead;
+        (*weaponHead)->pPrev = newWeapon;
+        newWeapon->pPrev = *weaponTail;
+        (*weaponTail)->pNext = newWeapon;
+        *weaponHead = newWeapon;
     }
     return true;
 }
 
 /**
- *  FUNCTION        :   psWieldNewWeapon
+ *  FUNCTION        :   wieldNewWeapon
  *  DESCRIPTION     :   This function allows the user to wield a new
  *                      weapon for the weapon wheel.
- *  PARAMETERS      :   ppWeaponHead, psWeaponToWield
- *  RETURNS         :   psWeaponToWield, KDOESNOTEXIST
+ *  PARAMETERS      :   weaponHead, weaponToWield
+ *  RETURNS         :   weaponToWield, KDOESNOTEXIST
  */
-const char* psWieldNewWeapon(struct Weapon* ppWeaponHead, char* psWeaponToWield)
+const char* wieldNewWeapon(struct Weapon* weaponHead, char* weaponToWield)
 {
-    struct Weapon* pHead = ppWeaponHead;
+    struct Weapon* pHead = weaponHead;
     do
     {   
         // Search for a matching weapon in the weapon wheel.
-        if ((strcmp(pHead->arsWeapon, psWeaponToWield)) == 0)
+        if ((strcmp(pHead->arsWeapon, weaponToWield)) == 0)
         {
-            return psWeaponToWield;
+            return weaponToWield;
         }
         pHead = pHead->pNext;
-    } while (pHead != ppWeaponHead);
+    } while (pHead != weaponHead);
     return KDOESNOTEXIST;
 }
 
 /**
- *  FUNCTION        :   bDeleteWeaponAtHead
+ *  FUNCTION        :   deleteWeaponAtHead
  *  DESCRIPTION     :   This function allows the user to delete
  *                      a single weapon from the "head" of the weapon wheel.
- *  PARAMETERS      :   ppWeaponHead, ppWeaponTail
+ *  PARAMETERS      :   weaponHead, weaponTail
  *  RETURNS         :   true, false
  */
-const bool bDeleteWeaponAtHead(struct Weapon** ppWeaponHead, struct Weapon** ppWeaponTail)
+const bool deleteWeaponAtHead(struct Weapon** weaponHead, struct Weapon** weaponTail)
 {
     struct Weapon* pTempNode = NULL;
-    pTempNode = *ppWeaponHead;
+    pTempNode = *weaponHead;
 
     // Is the weapon wheel empty ?
-    if (*ppWeaponHead == NULL) 
-    { 
-        return false;
-    }
-    else if ((*ppWeaponHead)->pNext == *ppWeaponHead)
+    if (*weaponHead == NULL) { return false; }
+    else if ((*weaponHead)->pNext == *weaponHead)
     {
-        *ppWeaponHead = NULL;
-        *ppWeaponTail = NULL;
+        *weaponHead = NULL;
+        *weaponTail = NULL;
         free(pTempNode);
         return true;
     }
     // We have more than one weapon in the list.
-    *ppWeaponHead = (*ppWeaponHead)->pNext;
-    (*ppWeaponHead)->pPrev = *ppWeaponTail;
-    (*ppWeaponTail)->pNext = *ppWeaponHead;
+    *weaponHead = (*weaponHead)->pNext;
+    (*weaponHead)->pPrev = *weaponTail;
+    (*weaponTail)->pNext = *weaponHead;
     free(pTempNode);
     return true;
 }
@@ -157,15 +151,15 @@ void newLineRemover(char* psInputWithNewLine)
  *  DESCRIPTION     :   This function will display the weapon selection
  *                      which is represented by the "Weapon Wheel" this allows
  *                      us to choose which weapon we would like that exists in the list.
- *  PARAMETERS      :   pWeaponHead
+ *  PARAMETERS      :   weaponHead, weaponTail
  *  RETURNS         :   None
  */
-void showWeaponWheel(struct Weapon* pWeaponHead)
+void showWeaponWheel(struct Weapon* pWeaponHead, struct Weapon* weaponTail)
 {   
-    struct Weapon* pWheel = pWeaponHead;
-    while (pWheel->pNext != pWeaponHead)
+    pWeaponHead = weaponTail;
+    do
     {
-        printf("\t%s", pWheel->arsWeapon);
-        pWheel = pWheel->pNext;
-    }
+        printf("\t%s", pWeaponHead->arsWeapon);
+        pWeaponHead = pWeaponHead->pNext;
+    } while (pWeaponHead != weaponTail);
 }   
