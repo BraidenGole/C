@@ -2,7 +2,7 @@
  *  FILE            :   weaponWheel.c
  *  PROJECT         :   None
  *  PROGRAMMER      :   Braiden Gole
- *  FIRST VERSION   :   2020-06-25 - (updated 2021-01-29) [Improvment] !
+ *  FIRST VERSION   :   2020-06-25 - (updated 2021-01-29) [Improvment].
  *  DESCRIPTION     :   This file contains the functions for our weapon wheel.
  */
 #include <stdio.h>
