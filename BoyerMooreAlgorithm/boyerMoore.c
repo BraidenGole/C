@@ -3,7 +3,7 @@
  * @author Braiden Gole
  * @brief This is a Boyer Moore pattern search implementation.
  * 
- * This implementation also includes a display of a occurences of the mask found in the pattern.
+ * This implementation also includes a display of all occurences of the mask found in the pattern.
  * --------------------------------------------------------------------------------------------
  * (Learned about the Boyer Moore Algorithm from (GeeksForGeeks))
  * [SOURCE/WEBSITE]: https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
