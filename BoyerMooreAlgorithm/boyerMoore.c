@@ -97,7 +97,7 @@ int* boyerMooreSearch(char* mask, char* pattern, int* matchQuantity, int matches
             --decMaskLen;
         }
 
-        // We have stopped matching characters or have met 0.
+        // We have stopped matching characters or have met -1.
         if (decMaskLen __LRG__ NEGATIVEONE)
         {   
             // Shift the pattern so that the bad character is aligned with the
