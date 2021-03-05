@@ -1,7 +1,7 @@
 /**
  * @file recursiveFunctions.c
- * @author your name (you@domain.com)
- * @brief 
+ * @author Braiden Gole
+ * @brief This is a small sample on recursion.
  * @version 0.1
  * @date 2021-03-04
  * @copyright Copyright (c) Braiden Gole 2021
