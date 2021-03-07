@@ -6,6 +6,10 @@
  * (Learned the ins and outs of a radix sort algorithm (GeeksForGeeks))
  * [SOURCE/WEBSITE]: https://www.geeksforgeeks.org/radix-sort/
  * ---------------------------------------------------------------------
+ * [IMPORTANT]
+ * Be careful what you sub in as far as numbers they should likely be under
+ * 5 digits in length, the reason for this is the algorithm itself.
+ *----------------------------------------------------------------------
  * @version 0.1
  * @date 2021-03-07
  * @copyright Copyright (c) Braiden Gole 2021
