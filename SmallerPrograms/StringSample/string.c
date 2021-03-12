@@ -1,7 +1,7 @@
 /**
  * @file string.c
  * @author Braiden Gole
- * @brief This is a sample of string manipulation in C.
+ * @brief This is a sample of string handling in C.
  * @version 0.1
  * @date 2021-03-12
  * @copyright Copyright (c) 2021
