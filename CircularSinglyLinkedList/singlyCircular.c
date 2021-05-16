@@ -1,7 +1,7 @@
 /**
  * @file singlyCircular.c
  * @author Braiden Gole
- * @brief 
+ * @brief This is a circular singly linked list implementation.
  * @version 0.1
  * @date 2021-05-16
  * @copyright Copyright (c) Braiden Gole 2021
