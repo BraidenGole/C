@@ -51,7 +51,7 @@ int fibonacciSearch(int array[], int size, int find)
         }
         else if (array[minimum] > find)
         {   
-            // Eliminate nuumbers from the right side.
+            // Eliminate numbers from the right side.
             cutRightRange(&fibTwo, &fibOne, &result);
         }
         else
