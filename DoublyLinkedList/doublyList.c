@@ -135,7 +135,7 @@ void showInReverse(struct Node* tail)
 
 /**     -- Function header comment
  *  FUNCTION        :   freeResources
- *  DESCRIPTION     :   This function will free the program of all dynamically allocations.
+ *  DESCRIPTION     :   This function will free the program of all dynamic allocations.
  *  PARAMETERS      :   head
  *  RETURNS         :   None
  */
