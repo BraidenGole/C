@@ -1,1 +1,1 @@
-NEW IMPLEMENTATION OF A DOUBLY LINKED LIST !
+New implementation of a doubly linked list.
