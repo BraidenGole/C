@@ -2,25 +2,23 @@
  *  FILE            :   bubbleSort.cpp
  *  PROJECT         :   None
  *  PROGRAMMER      :   Braiden Gole
- *  FIRST VERSION   :   2020-02-23
+ *  FIRST VERSION   :   2020-02-23 - Update (2021-06-30)
  *  DESCRIPTION     :   This is the implementation of a multidimensional bubble sort.
  */
 #include <stdio.h>
 
-#define KBUBBLE_ROWS 8
-#define KBUBBLE_COLS 8
-#define KBUBBLE_TOTAL (KBUBBLE_ROWS * KBUBBLE_COLS)
+#define BUBBLEROWS 8
+#define BUBBLECOLS 8
+#define BUBBLETOTAL (BUBBLEROWS * BUBBLECOLS)
 
-// [ Efficient swap macro ]
-#define KEFFICIENT_SWAP(tmp, x, y) { tmp=x, x=y, y=tmp; }
+#define SWAP(tmp, x, y) { tmp=x, x=y, y=tmp; }
 
 // Function prototypes.
-void outputSortedSet(int ariMultiDimensional[KBUBBLE_ROWS][KBUBBLE_COLS]);
+void outputSortedSet(int multiDimensional[BUBBLEROWS][BUBBLECOLS]);
 
 int main(void)
 {   
-    // Declare an array to sort.
-    int ariBubbleSort[KBUBBLE_ROWS][KBUBBLE_COLS] = 
+    int array[BUBBLEROWS][BUBBLECOLS] = 
     {
         { 3, 4, 54, 32, 87, 1, 5, 7 },
         { 2, 4, 43, 12, 90, 56, 34, 29 },
@@ -32,32 +30,30 @@ int main(void)
         { 100, 200, 400, 600, 200, 111, 200, 1000 },
     };
 
-    int iTemp = 0;
-    int iSortUntilComplete = 0; int iBubbleRows = 0; int iBubbleCols = 0;
-    while (iSortUntilComplete < KBUBBLE_TOTAL)
-    {   
-        iBubbleRows = 0;
-        while (iBubbleRows < KBUBBLE_ROWS)
-        {   
-            iBubbleCols = 0;
-            while (iBubbleCols < KBUBBLE_COLS)
-            {
-                if (ariBubbleSort[iBubbleRows][iBubbleCols] >=
-                 ariBubbleSort[iBubbleRows][iBubbleCols + 1])
-                {   
-                    // Call to a macro with parameters.
-                    KEFFICIENT_SWAP(iTemp, ariBubbleSort[iBubbleRows][iBubbleCols],
-                    ariBubbleSort[iBubbleRows][iBubbleCols + 1])
-                }
-                ++iBubbleCols;
-            }
-            ++iBubbleRows;
-        }
-        ++iSortUntilComplete;
-    }
+    int temp = 0;
+    int sort = 0; 
+    int rows = 0; 
+    int cols = 0;
 
-    // Output the contents to the console window.
-    outputSortedSet(ariBubbleSort);
+    while (sort < BUBBLETOTAL)
+    {   
+        rows = 0;
+        while (rows < BUBBLEROWS)
+        {   
+            cols = 0;
+            while (cols < BUBBLECOLS)
+            {
+                if (array[rows][cols] >= array[rows][cols + 1])
+                {   
+                    SWAP(temp, array[rows][cols], array[rows][cols + 1])
+                }
+                ++cols;
+            }
+            ++rows;
+        }
+        ++sort;
+    }
+    outputSortedSet(array);
     return 0;
 }
 
@@ -66,31 +62,33 @@ int main(void)
  *  DESCRIPTION     :   This function will take in the multidimensional
  *                      array as input to then be displayed to the
  *                      console window.
- *  PARAMETERS      :   ariMultiDimensional[KBUBBLE_ROWS][KBUBBLE_COLS]
+ *  PARAMETERS      :   multiDimensional[BUBBLEROWS][BUBBLECOLS]
  *  RETURNS         :   None
  */
-void outputSortedSet(int ariMultiDimensional[KBUBBLE_ROWS][KBUBBLE_COLS])
+void outputSortedSet(int multiDimensional[BUBBLEROWS][BUBBLECOLS])
 {   
-    int iBreakAfterLimit = 0; const int kNewLineLimit = 15;
-    int iUnpackRows = 0; int iUnpackColumns = 0;
+    int breakAfterLimit = 0; 
+    const int newLineLimit = 15;
+    int unpackRows = 0; 
+    int unpackColumns = 0;
 
     printf("===========================================================================\n");
     printf("  [ BUBBLE SORT ]\n\n   >>> Output \n\n\t");
-    while (iUnpackRows < KBUBBLE_ROWS)
+    while (unpackRows < BUBBLEROWS)
     {   
-        iUnpackColumns = 0;
-        while (iUnpackColumns < KBUBBLE_COLS)
+        unpackColumns = 0;
+        while (unpackColumns < BUBBLECOLS)
         {  
-            printf("%i ", ariMultiDimensional[iUnpackRows][iUnpackColumns]);
-            if (iBreakAfterLimit == kNewLineLimit)
+            printf("%i ", multiDimensional[unpackRows][unpackColumns]);
+            if (breakAfterLimit == newLineLimit)
             { 
-                iBreakAfterLimit = 0;
+                breakAfterLimit = 0;
                 printf("\n\t");
             }
-            ++iBreakAfterLimit;
-            ++iUnpackColumns;
+            ++breakAfterLimit;
+            ++unpackColumns;
         }
-        ++iUnpackRows;
+        ++unpackRows;
     }
     printf("\n===========================================================================\n");
 }
